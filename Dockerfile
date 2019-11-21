@@ -1,6 +1,7 @@
 from kkarczmarczyk/node-yarn:8.0 as jsBuilder
 ADD . /src
 WORKDIR /src
+RUN yarn config set "strict-ssl" false -g
 RUN yarn install
 RUN yarn build
 
